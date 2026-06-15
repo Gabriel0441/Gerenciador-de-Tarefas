@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TodoistApplication",
+            "request": "launch",
+            "mainClass": "Gerenciador.de.tarefas.TodoistApplication"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-TodoistApplication<Todoist>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
