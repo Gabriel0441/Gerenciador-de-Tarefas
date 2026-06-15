@@ -1,0 +1,19 @@
+[33mcommit d7bc80b3c861327cbbdd75af9f91b7903e50e74f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Gabriel Coutinho <bielg8998@gmail.com>
+Date:   Sun May 17 22:21:43 2026 -0300
+
+    Dockerfile deploy
+
+[1mdiff --git a/Dockerfile b/Dockerfile[m
+[1mindex b22a0d8..ece82f9 100644[m
+[1m--- a/Dockerfile[m
+[1m+++ b/Dockerfile[m
+[36m@@ -8,6 +8,8 @@[m [mCOPY . .[m
+ RUN apt-get install maven -y[m
+ RUN mvn clean install[m
+ [m
+[32m+[m[32mFROM openjdk:17-jdk-slim[m
+[32m+[m
+ EXPOSE 8080[m
+ [m
+ COPY --from=build /target/Todoist-1.0.0.jar app.jar[m
